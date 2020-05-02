@@ -1,4 +1,6 @@
-# I target a recent cmake, it shouldn't be a problem on a dev machine
+# This file was taken from: https://www.kuon.ch/post/2018-07-11-avr-cmake/
+# Slight modifications were applied to be used with CLion during the
+# IE119 class.
 cmake_minimum_required(VERSION 3.16)
 # Project name
 project("Arduino")
@@ -8,8 +10,7 @@ set(PRODUCT_NAME arduino)
 
 ## AVR Chip Configuration
 # 8Mhz, this should match the crystal on your board,
-# I use 8Mhz and 3.3V for the lowest power consumption
-set(F_CPU 16000000UL)
+set(F_CPU 8000000UL)
 # CPU, you can find the list here:
 # https://gcc.gnu.org/onlinedocs/gcc/AVR-Options.html
 set(MCU atmega328p)
