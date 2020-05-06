@@ -5,6 +5,7 @@ int32_t INT_Counter = 0;
 int main() {
     cli();
     DDRB = 0x01 << 5;
+    TCCR0B = 2;
     TIMSK0 = 1;
     PORTB = 0x00;
     sei();
